@@ -1,0 +1,90 @@
+<head>
+		<title>Forgot</title>
+		<link rel="stylesheet" src="text/css" href="login.css">
+		<link rel="stylesheet" src="text/css" href="header.css"/>
+		
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+
+<script>
+var firebaseConfig = {
+apiKey: "AIzaSyDEVNA5rNo3w0wyNbGF-2u1R7Bcv7RdWo8",
+authDomain: "vaccine-webapp.firebaseapp.com",
+projectId: "vaccine-webapp",
+storageBucket: "vaccine-webapp.appspot.com",
+messagingSenderId: "523647795483",
+appId: "1:523647795483:web:3609d1b0896bb99f03d3be",
+measurementId: "G-1PJDSHY1MH"
+};
+
+firebase.initializeApp(firebaseConfig);
+</script>
+	</head>
+
+<div class="header" id="myheader">
+			<a href="index.html"><h2 id="Name">&nbsp;Medlife</h2></a>
+			<a href="login.html" class="links" >Login</a>
+			<a href="register.html" class="links">Register</a>
+			<!-- <a href="contactUS.html" class="links" >Contact Us</a> -->
+			<a href="index.html" class="links">Home</a>
+		</div>
+
+	
+<fieldset style="width:300px;height:auto;margin:auto;margin-top:133px;border-radius:4px;">
+
+
+  <h1>Reset Password</h1>
+  
+    <input type="text" id="email" placeholder="Enter Your Email" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="submit" value="Reset" id="forgetBtn" />
+	<br>
+	<hr>
+	<a href="login.html">Back to Login</a>
+ 
+
+</fieldset>
+
+
+
+
+
+<script>
+
+
+
+
+document.getElementById("forgetBtn").addEventListener('click',
+    function forget(){
+	// 	var password = document.getElementById('password').value
+	//              firebase.database().ref('users').update({
+	// 		   password:password,
+        
+ 
+       
+    // })}
+	var email = document.getElementById('email').value
+	var auth =firebase.auth();
+	
+	if(email !=""){
+		auth.sendPasswordResetEmail(email)
+		.then(()=>{
+			alert("Email has been sent to your Gmail please check your gmail")
+
+		})
+		.catch((error)=>{
+        console.log(error.message)
+		})
+
+	}else{
+
+	}
+alert("please write your email first")
+
+
+	})
+    
+
+	
+</script>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" src="text/css" href="header.css"/>
+	<link rel="stylesheet" src="text/css" href="dashboard.css"/>
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+
+<script>
+var firebaseConfig = {
+// apiKey: "AIzaSyDEVNA5rNo3w0wyNbGF-2u1R7Bcv7RdWo8",
+// authDomain: "vaccine-webapp.firebaseapp.com",
+// projectId: "vaccine-webapp",
+// storageBucket: "vaccine-webapp.appspot.com",
+// messagingSenderId: "523647795483",
+// appId: "1:523647795483:web:3609d1b0896bb99f03d3be",
+// measurementId: "G-1PJDSHY1MH"
+apiKey: "AIzaSyBGQB9uYsLufTcb4nLQyuTdbveLx7eCK-w",
+  authDomain: "vaccine-app-efaa8.firebaseapp.com",
+  projectId: "vaccine-app-efaa8",
+  storageBucket: "vaccine-app-efaa8.appspot.com",
+  messagingSenderId: "775902485056",
+  appId: "1:775902485056:web:7d46efea724c6cf7189da5",
+  measurementId: "G-C2412TPXD6"
+};
+
+firebase.initializeApp(firebaseConfig);
+</script>
+
+	
+		
+	</head>
+	<body>
+	<div class="header" id="myheader">
+			<a href="#"><h2 id="Name">&nbsp;Medlife</h2></a>
+			<a href="login.html" class="links" >Log Out</a>
+		<!--	<a href="contactUS.html" class="links" >Contact Us</a>
+			<a href="index.html" class="links">Home</a> -->
+		</div>
+		
+		<br><br><br>
+		<div class="main">
+			
+			</br>
+			<div style="float:left" width="90%">
+				<div id="mySidenav" class="sidenav">
+					<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>	<!--&times; is used for 'x' sign.-->
+					<br/>
+					<br/>
+					<br/>
+					<a href="#">Hi, #Name</a>
+					<br/>
+					<a href="setting.html">Setting</a>
+					<br/>
+					<a href="vaccine.html">Registration </a>
+					<br/>
+					<a href="status.html">Status </a>
+					<br/>
+					<a href="book.html">Book appointment </a>
+				</div>
+				<div id="content">
+					<span style="font-size:30px;cursor:pointer" onclick="openNav()">&nbsp;&nbsp;&nbsp;&#9776;</span>	<!--&#9776; is used for toggle sign.-->
+					&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:30px;text-align:center">User Dashbaord</span>
+				</div>
+				<script>
+					function openNav() {
+						document.getElementById("mySidenav").style.width = "270px";
+					}
+					function closeNav() {
+						document.getElementById("mySidenav").style.width = "0";
+					}
+				</script>
+			</div>
+			<br/>
+			<br/>
+			<br/>
+			<hr>
+			</div>
+				<div>
+			<form method="" action="">
+				<fieldset style="width:450px;height:auto;margin:auto;margin-top:85px;border-radius:4px;">
+					<legend align="center"><b> Edit Profile</b></legend>
+						
+						<table style="margin:0 auto;">
+						    <tr>
+								<td colspan="2"> <h2 style="text-align: left;">Account Information</h2></td>
+									
+							</tr>
+							
+							<tr>
+								<td colspan="2">Full Name : </td>
+									<td colspan="2"><input type="text" id="fullName" placeholder="Full Name" style="width:100%;" name="fname" pattern="[A-Za-z ]+" required ></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="2">Email : </td>
+									<td colspan="2"><input type="email" id="email" placeholder="Email" style="width:100%;" name="email" required></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="2">Mobile Number : </td>
+									<td colspan="2"><input type="text" id="number"  placeholder="Phone Number" style="width:100%;" name="Phone" pattern="[0-9]{10}" required></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="2"><h2 style="text-align: left;">Change Password</h2></td>
+									
+							</tr>
+							
+							<tr>
+								<td colspan="2">Current Password: </td>
+									<td colspan="2"><input type="password" id="password" style="width:100%;" name="pass" pattern="[A-Za-z0-9]{1,}" required></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="2">New Password: </td>
+									<td colspan="2"><input type="password" id="newPassword" style="width:100%;" name="cpass" pattern="[A-Za-z0-9]{1,}" required></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="2">Confirm Password: </td>
+									<td colspan="2"><input type="password" id="confirmPassword" style="width:100%;" name="cpass" pattern="[A-Za-z0-9]{1,}" required></td>
+							</tr>
+							<tr><td><br/></td></tr>
+							<tr>
+								<td colspan="4" align="center"><input type="submit"  name="submit" id="btn" value="Update"></td>
+							</tr>
+							
+						</table>
+						
+					<br/>
+				</fieldset>
+			</form>
+		</div>
+			
+		</div>
+		<script src="edit.js"></script>
+		
+	</body>
+</html>

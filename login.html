@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" src="text/css" href="login.css">
+	<link rel="stylesheet" src="text/css" href="header.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<!-- <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script> -->
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+
+	<script>
+		var firebaseConfig = {
+			// apiKey: "AIzaSyDEVNA5rNo3w0wyNbGF-2u1R7Bcv7RdWo8",
+			// authDomain: "vaccine-webapp.firebaseapp.com",
+			// projectId: "vaccine-webapp",
+			// storageBucket: "vaccine-webapp.appspot.com",
+			// messagingSenderId: "523647795483",
+			// appId: "1:523647795483:web:3609d1b0896bb99f03d3be",
+			// measurementId: "G-1PJDSHY1MH"
+			apiKey: "AIzaSyBGQB9uYsLufTcb4nLQyuTdbveLx7eCK-w",
+			authDomain: "vaccine-app-efaa8.firebaseapp.com",
+			projectId: "vaccine-app-efaa8",
+			storageBucket: "vaccine-app-efaa8.appspot.com",
+			messagingSenderId: "775902485056",
+			appId: "1:775902485056:web:7d46efea724c6cf7189da5",
+			measurementId: "G-C2412TPXD6"
+		};
+
+		firebase.initializeApp(firebaseConfig);
+	</script>
+
+</head>
+
+<body>
+
+	<div class="header" id="myheader">
+		<a href="index.html">
+			<h2 id="Name">&nbsp;Medlife</h2>
+		</a>
+		<a href="login.html" class="links">Login</a>
+		<a href="register.html" class="links">Register</a>
+		<a href="contactUS.html" class="links">Contact Us</a>
+		<a href="index.html" class="links">Home</a>
+	</div>
+
+	<div>
+		<div id="javaAlert" style="margin-top: 50px;">
+
+		</div>
+		<form action="./dashboard.html">
+
+			<fieldset style="width:300px;height:auto;margin:auto;margin-top:90px;border-radius:4px;">
+				<legend style="text-decoration:underline; color:#172a55; font-weight: 700;"><b>User Login </b></legend>
+				<br />
+				<h2>User Login</h2>
+				<br /><br />
+				<p>UserEmail &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="email" type="text" required />
+				</p>
+				<p>Password &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input id="password" type="password" required />
+				</p>
+				<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<!-- <button id="btn"  onclick="login(e)" >Submit</button> -->
+				<!-- <button id="clickMe">Click me</button> -->
+				<input type="submit" id="btn" value="Login" name="submit">
+				<br />
+				<br />
+				<a href="forgot.html">Forget Password ?</a>
+				<br><br>
+				<hr>
+				<br>
+				<a href="register.html">Not a member? &nbsp; Sign up now</a>
+			</fieldset>
+		</form>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>

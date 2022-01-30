@@ -1,0 +1,73 @@
+<head>
+    <title>Status</title>
+    <link rel="stylesheet" src="text/css" href="login.css">
+    <link rel="stylesheet" src="text/css" href="header.css" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+
+    <script>
+        var firebaseConfig = {
+            // apiKey: "AIzaSyDEVNA5rNo3w0wyNbGF-2u1R7Bcv7RdWo8",
+            // authDomain: "vaccine-webapp.firebaseapp.com",
+            // projectId: "vaccine-webapp",
+            // storageBucket: "vaccine-webapp.appspot.com",
+            // messagingSenderId: "523647795483",
+            // appId: "1:523647795483:web:3609d1b0896bb99f03d3be",
+            // measurementId: "G-1PJDSHY1MH"
+            apiKey: "AIzaSyBGQB9uYsLufTcb4nLQyuTdbveLx7eCK-w",
+            authDomain: "vaccine-app-efaa8.firebaseapp.com",
+            projectId: "vaccine-app-efaa8",
+            storageBucket: "vaccine-app-efaa8.appspot.com",
+            messagingSenderId: "775902485056",
+            appId: "1:775902485056:web:7d46efea724c6cf7189da5",
+            measurementId: "G-C2412TPXD6"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+
+<div class="header" id="myheader">
+    <a href="index.html">
+        <h2 id="Name">&nbsp;Medlife</h2>
+    </a>
+    <a href="login.html" class="links">Login</a>
+    <a href="register.html" class="links">Register</a>
+    <a href="contactUS.html" class="links">Contact Us</a>
+    <a href="index.html" class="links">Home</a>
+</div>
+
+
+<fieldset style="width:300px;height:auto;margin:auto;margin-top:133px;border-radius:4px;">
+    <h1>Status: <span id="status"></span></h1>
+</fieldset>
+
+
+<script>
+
+    var status=document.getElementById("status").innerHTML=false
+    var db = firebase.firestore()
+    // var docRef = db.collection("");
+    db.collection("Vaccine")
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.id, " => ", doc.data());
+                var status = document.getElementById("status").innerHTML = doc.data().status
+
+            });
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ", error);
+        });
+
+
+
+
+
+
+</script>
